@@ -7,9 +7,7 @@ class MyApp extends StatelessWidget {
   // #docregion build
   @override
   Widget build(BuildContext context) {
-    // var details = [
-    //   'Name: Edidiong Ekpo'
-    // ]
+    
     return MaterialApp(
       title: 'My Details',
       theme: ThemeData(
@@ -19,12 +17,15 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('My Bio'),
         ),
-        body: Column(children: [
-          Text('Name: Edidiong Ekpo'),
-          Text('Slack Username: Maverick'),
-          Text('Start.Ng Email: Eddymav247@gmail.com'),
-          Text('Courses: Flutter, Javscript Html And Css, UI/UX design')
-        ],),
+        body: SafeArea(
+          child: ListView(
+            children: <Widget>
+            [
+            Text('Name: Edidiong Ekpo', style: TextStyle(fontSize: 20.0)),
+            Text('Slack Username: Maverick', style: TextStyle(fontSize: 20.0)),
+            Text('Start.Ng Email: Eddymav247@gmail.com', style: TextStyle(fontSize: 20.0)),
+            Text('Courses: Flutter, Javscript Html And Css, UI/UX design', style: TextStyle(fontSize: 20.0))
+          ],),),
 
       ),
     );
